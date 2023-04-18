@@ -1,0 +1,37 @@
+.parent{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.playground{
+    width: 100%;
+    /* height: 100%; */
+    display: flex;
+    flex-direction: row;
+    height: 50vh;
+}
+.one-fold{
+    width: 100%;
+}
+.two-fold{
+    display: flex;
+    flex-direction: row;
+
+}
+.output-area{
+    height: 50vh;
+    /* height: 100%; */
+    width: 100%;
+    background-color: brown;
+}
+
+.output-window{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    box-sizing: border-box;
+}
+.editor-title{
+    align-self: center;
+}

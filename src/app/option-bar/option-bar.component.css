@@ -1,0 +1,17 @@
+.parent{
+    background-color: aquamarine;
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+.langs{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.actions{
+    align-self: center;
+    flex-wrap: wrap-reverse;
+    margin-right: 1rem;
+}

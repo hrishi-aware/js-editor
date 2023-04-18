@@ -1,0 +1,17 @@
+<div class="parent">
+    <div></div>
+    <div class="langs">
+        <div>
+            <input type="checkbox" (change)="onChecked($event)" checked value="html">HTML
+        </div>
+        <div>
+            <input type="checkbox" (change)="onChecked($event)" checked value="css">CSS
+        </div>
+        <div>
+            <input type="checkbox" (change)="onChecked($event)" checked value="js">JS
+        </div>
+    </div>
+    <div class="actions">
+        <button class="btn-run" (click)="onClickRun()">Run</button>
+    </div>
+</div>
