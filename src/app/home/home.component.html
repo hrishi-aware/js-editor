@@ -4,17 +4,17 @@
         <ng-container *ngFor="let a of this.AppShareService.lanEnabled" [ngSwitch]="a.lang" >  
             <ng-template ngSwitchCase="html">
                 <div class="one-fold">
-                    <app-html-editor (htmlVal)="receiveValues($event,'html')"></app-html-editor>
+                    <app-editor (htmlVal)="receiveValues($event,'html')" [langType]="a.lang"></app-editor>
                 </div>
             </ng-template>
             <ng-template ngSwitchCase="css">
                 <div class="one-fold">
-                    <app-css-editor (cssVal)="receiveValues($event,'css')"></app-css-editor>
+                    <app-editor (htmlVal)="receiveValues($event,'css')" [langType]="a.lang"></app-editor>
                 </div>
             </ng-template>
             <ng-template  ngSwitchCase="js">
                 <div class="one-fold">
-                    <app-js-editor (jsVal)="receiveValues($event,'js')"></app-js-editor>
+                    <app-editor (htmlVal)="receiveValues($event,'js')" [langType]="a.lang"></app-editor>
                 </div>
             </ng-template>    
         </ng-container>
@@ -22,5 +22,8 @@
     <span class="editor-title">Output</span>
     <div class="output-area">
         <iframe class="output-window" sandbox="allow-scripts allow-forms allow-modals" [attr.srcdoc]="srcDoc | noSanitize"   id="output" frameborder="0"></iframe>
+        <div id="ca" class="console-area">
+            <span></span>
+        </div>
     </div>
 </div>

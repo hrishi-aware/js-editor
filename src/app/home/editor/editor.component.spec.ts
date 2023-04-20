@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HtmlEditorComponent } from './html-editor.component';
+import { EditorComponent } from './editor.component';
 
-describe('HtmlEditorComponent', () => {
-  let component: HtmlEditorComponent;
-  let fixture: ComponentFixture<HtmlEditorComponent>;
+describe('EditorComponent', () => {
+  let component: EditorComponent;
+  let fixture: ComponentFixture<EditorComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HtmlEditorComponent ]
+      declarations: [ EditorComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(HtmlEditorComponent);
+    fixture = TestBed.createComponent(EditorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,7 +1,4 @@
 import { Component, Inject, SecurityContext } from '@angular/core';
-import {DomSanitizer, SafeValue} from '@angular/platform-browser';
-import { NgDompurifyPipe } from '@tinkoff/ng-dompurify'; 
-import * as DOMPurify from 'dompurify';
 import { NoSanitizePipe } from '../no-sanitize.pipe';
 import { AppShareService } from '../services/app-share.service';
 
@@ -31,7 +28,9 @@ export class HomeComponent {
   constructor(public AppShareService:AppShareService
     ){}
 
- 
+  ngOnInit(){
+    
+  }
   receiveValues($event:string,lang:string){
     switch(lang){
       case "html":this.html=$event

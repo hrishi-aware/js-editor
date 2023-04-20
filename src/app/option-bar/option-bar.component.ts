@@ -20,22 +20,25 @@ export class OptionBarComponent {
   }
   onChecked(event:Event){
     let val:any = event.target
-    console.log(event)
+    console.log(val)
     let checkBoxVal:string = <string>val.value
     if(!val.checked){
+      if(this.appShareService.lanEnabled.length == 1) {
+        alert("keep min one checked")
+        val.checked = true
+        return
+      }
       this.appShareService.lanEnabled = this.appShareService.lanEnabled.filter((val,i)=>{
         return val.lang != checkBoxVal
       })
-
       this.appShareService.lanEnabled.sort((a:langType,b:langType)=>{return a.id-b.id})
-      console.log("uncheck",this.appShareService.lanEnabled)
+      
     }
     else if(val.checked){
       this.appShareService.lanEnabled.push(this.langObj[checkBoxVal])
-      this.appShareService.lanEnabled.sort((a:langType,b:langType)=>{return a.id-b.id})
-      console.log("check",this.appShareService.lanEnabled)
+      this.appShareService.lanEnabled.sort((a:langType,b:langType)=>{return a.id-b.id}) 
     }
-    console.log(val.value )
+    
   }
   onClickRun(){
     this.appShareService.runClicked.next('clicked')

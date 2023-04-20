@@ -13,7 +13,7 @@
     resize: none;
     padding: 0;
     margin: 0;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
 }
 .editor-area-style-outer{
     height: 100%;
@@ -34,7 +34,7 @@
     width: 100%;
     display: flex;
 }
-.numbers{
+.html-numbers{
     width: 6%;
     height: 100%;
     background-color: #282a3a;
@@ -44,27 +44,62 @@
     line-height: 21px;
     text-align: right;
     font-size: 14px;
+    overflow: hidden;
 }
-textarea{
-    line-height: 21px;
-}
-.numbers span{
+.html-numbers span{
     counter-increment: linenumber;
     
 }
-.numbers span::before{
+.html-numbers span::before{
     content: counter(linenumber);
     display: block;
     color: #506882;
 }
-/* .number{
-    color: white;
-    padding: 2px 1px 1px 4px;
-    font-size: 12px;
-    line-height: 10px;
-    margin-bottom: 4px;
-    border: 1px solid white; 
-} */
+.css-numbers{
+    width: 6%;
+    height: 100%;
+    background-color: #282a3a;
+    outline: none;
+    display: flex;
+    flex-direction: column;
+    line-height: 21px;
+    text-align: right;
+    font-size: 14px;
+    overflow: hidden;
+}
+.css-numbers span{
+    counter-increment: linenumber;
+    
+}
+.css-numbers span::before{
+    content: counter(linenumber);
+    display: block;
+    color: #506882;
+}
+.js-numbers{
+    width: 6%;
+    height: 100%;
+    background-color: #282a3a;
+    outline: none;
+    display: flex;
+    flex-direction: column;
+    line-height: 21px;
+    text-align: right;
+    font-size: 14px;
+    overflow: hidden;
+}
+.js-numbers span{
+    counter-increment: linenumber;
+    
+}
+.js-numbers span::before{
+    content: counter(linenumber);
+    display: block;
+    color: #506882;
+}
+textarea{
+    line-height: 21px;
+}
 .code-area{
     width: 95%;
     height: 100%;

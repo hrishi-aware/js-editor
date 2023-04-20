@@ -1,0 +1,11 @@
+<div class="editor-area-style-outer">
+    <span class="editor-title">{{langType |uppercase}}</span>
+    <div class="text-area-parent">
+        <div id="{{langType}}nums" class="{{langType}}-numbers" >
+            <span></span>
+        </div>
+       
+        <textarea #{{langtype}}ta id="editor-area" class="editor-area-style" [(ngModel)]="value" (keydown)="detectEnter($event)" (scroll)="scrollBoth($event)"></textarea>
+        
+    </div>
+</div>
